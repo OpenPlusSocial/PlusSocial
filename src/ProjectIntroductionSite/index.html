@@ -35,9 +35,8 @@
               background-size: cover;
         }
 
-        @media screen and (max-device-width: 400px) {
-              html { background: url(Media/Images/Daisy_696X1023.jpg) #000 no-repeat center center fixed; }
-              #bgvid { display: none; }
+        @media screen and (max-device-width: 600px) {
+                           #bgvid { display: none; }
         }
 
         h1{
@@ -45,15 +44,24 @@
         }
 
         .landing-page{
-          margin-top: 20%;
+        /*  margin-top: 20%;*/
           background: none;
           color:white;
           font-weight: bold;
           text-align: center;
         }
 
+        @media screen and (max-device-width: 600px) {
+          .landing-page{
+          color:black;
+        }
+        }
+
         .landing-page h1 {
           font-size: 80px;
+          display: inline-block;
+           height: 100%;
+    vertical-align: middle;
         }
 
 
@@ -62,7 +70,7 @@
         </style>
 
 
-    <video autoplay loop poster="Media/Images/Daisy_1695X1023.jpg" id="bgvid">
+    <video  loop id="bgvid">
       <source src="media/video/Daisy_flowers_2.mp4" type="video/mp4">
     </video>
 
