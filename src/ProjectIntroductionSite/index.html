@@ -1,132 +1,65 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/site.css">
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-        <!-- Add your site or application content here -->
-        
-
-        <style type="text/css">
-            video#bgvid {
-              position: fixed; right: 0; bottom: 0;
-              min-width: 100%; min-height: 100%;
-              width: auto; height: auto; z-index: -100;
-              background: url(Media/Images/Daisy_1695X1023.jpg) no-repeat;
-              background-size: cover;
-        }
-
-        @media screen and (max-device-width: 600px) {
-                           #bgvid { display: none; }
-        }
-
-        h1{
-          font-family: 'Montserrat', sans-serif;
-        }
-
-        .landing-page{
-        /*  margin-top: 20%;*/
-          background: none;
-          color:white;
-          font-weight: bold;
-          text-align: center;
-        } 
-
-        .landing-page h1 {
-          font-size: 80px;
-          display: inline-block;
-          height: 100%;
-          vertical-align: middle;
-          opacity: 0.8;
-
-        }
-
-        @media screen and (max-device-width: 600px) {
-          .landing-page{
-            color:black;
-        }
-
-          .landing-page h1 {
-            font-size: 50px;
-
-        }
-
-        }
-
-       
-
-
-
-
-        </style>
-
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
     <video autoplay loop id="bgvid">
-      <source src="media/video/Daisy_flowers_2.mp4" type="video/mp4">
+        <source src="media/video/Daisy_flowers_2.mp4" type="video/mp4">
     </video>
 
-
-
-
     <div class="container">
-      <!-- <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">Project name</h3>
-      </div> -->
 
-      <div class="jumbotron landing-page ">
-       <div class="row">
-        <h1><span>Open</span><span> + </span><span>Social</span></h1>
-      <!--   <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
+        <div class="jumbotron landing-page ">
+            <div class="row">
+                <div class="col-md-5 text-right"><h1>Open</h1></div>
+               
+                <div class="col-md-2">
+                    <img alt="github" src="Media/Images/Icons/plus128x87.png" width="128">
+                </div>
+                
+                <div class="col-md-5 text-left"><h1>Social</h1></div>
+            </div>
 
-      </div>
+            <div class="row">
+                <a href="https://github.com/OpenPlusSocial/PlusSocial">
+                    <img alt="github" src="Media/Images/GitHub/GitHub-Mark-120px-plus.png" width="200">
+                </a>
+            </div>
+            <div class="row">
+                <h3>help us change the world</h3>
 
-<div class="row">
-     <a href="https://github.com/OpenPlusSocial/PlusSocial">
-      <img alt="github"  src="Media/Images/GitHub/GitHub-Mark-120px-plus.png" width="200">
-    </a>
-      </div>
-             <div class="row">
-        <h3>help us change the world</h3>
-      <!--   <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
-
-      </div>
-</div>
-  
-     <!--  <div class="footer">
-        <p>&copy; 2014</p>
-      </div> -->
+            </div>
+        </div>
 
     </div> <!-- /container -->
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
 </html>

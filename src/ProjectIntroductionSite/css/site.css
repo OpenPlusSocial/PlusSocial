@@ -1,0 +1,42 @@
+video#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(Media/Images/Daisy_1695X1023.jpg) no-repeat;
+  background-size: cover;
+}
+@media screen and (max-device-width: 600px) {
+  #bgvid {
+    display: none;
+  }
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+.landing-page {
+  /*  margin-top: 20%;*/
+  background: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.landing-page h1 {
+  font-size: 80px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+@media screen and (max-device-width: 600px) {
+  .landing-page {
+    color: black;
+  }
+  .landing-page h1 {
+    font-size: 50px;
+  }
+}
