@@ -13,8 +13,6 @@ Added basic Azure website to look at the git root
 http://openplussocial.azurewebsites.net/
 
 
-
-
 Notes:
 
 http://www.hanselman.com/blog/introducinggulpgruntbowerandnpmsupportforvisualstudio.aspx
