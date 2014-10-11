@@ -30,3 +30,7 @@ Run npm update -g npm
 Run npm install
 Run npm install -g grunt-cli
 Run grunt
+
+
+### Status
+[![Build Status](https://travis-ci.org/OpenPlusSocial/PlusSocial.svg)](https://travis-ci.org/OpenPlusSocial/PlusSocial)
