@@ -8,15 +8,15 @@ module.exports = function (grunt) {
                 },
                 files: { "src/ProjectIntroductionSite/css/site.css": "src/ProjectIntroductionSite/css/less/site.less" }
             }
-            //,            production: {
-            //    options: {
-            //        paths: ["assets/css"],
-            //        cleancss: true
-            //    },
-            //    files: { "path/to/result.css": "path/to/source.less" }
-            //}
-        }
+            
+        },
+
+	watch: {
+		files: "src/ProjectIntroductionSite/css/less/*.less",
+		tasks: ["less"]
+	}
     });
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['less']);
 };
