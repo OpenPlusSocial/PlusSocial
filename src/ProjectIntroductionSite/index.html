@@ -31,12 +31,12 @@
               position: fixed; right: 0; bottom: 0;
               min-width: 100%; min-height: 100%;
               width: auto; height: auto; z-index: -100;
-              background: url(polina.jpg) no-repeat;
+              background: url(Media/Images/Daisy_1695X1023.jpg) no-repeat;
               background-size: cover;
         }
 
         @media screen and (max-device-width: 400px) {
-              html { background: url(polina.jpg) #000 no-repeat center center fixed; }
+              html { background: url(Media/Images/Daisy_696X1023.jpg) #000 no-repeat center center fixed; }
               #bgvid { display: none; }
         }
 
@@ -47,6 +47,13 @@
         .landing-page{
           margin-top: 20%;
           background: none;
+          color:white;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .landing-page h1 {
+          font-size: 80px;
         }
 
 
@@ -55,7 +62,7 @@
         </style>
 
 
-    <video autoplay loop poster="polina.jpg" id="bgvid">
+    <video autoplay loop poster="Media/Images/Daisy_1695X1023.jpg" id="bgvid">
       <source src="media/video/Daisy_flowers_2.mp4" type="video/mp4">
     </video>
 
@@ -73,7 +80,7 @@
       </div> -->
 
       <div class="jumbotron landing-page ">
-        <h1>Open + Social</h1>
+        <h1><span>Open</span><span> + </span><span>Social</span></h1>
       <!--   <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
       </div>
