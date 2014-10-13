@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-html-validation');
     
-    grunt.registerTask('default', ['less','validation',]);
+    grunt.registerTask('default', ['less','validation']);
     // Travis CI task.
-    grunt.registerTask('travis',  ['less']);
+    grunt.registerTask('travis',  ['less','validation']);
 };
