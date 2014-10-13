@@ -9,11 +9,6 @@ video#bgvid {
   z-index: -100;
   background-size: cover;
 }
-@media screen and (max-device-width: 600px) {
-  #bgvid {
-    display: none;
-  }
-}
 h1 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -31,11 +26,14 @@ h1 {
   vertical-align: middle;
   opacity: 0.8;
 }
-@media screen and (max-device-width: 600px) {
+.landing-page div.row.page-headline {
+  min-height: 200px;
+}
+@media screen and (max-width: 767px) {
   .landing-page {
     color: black;
   }
   .landing-page h1 {
-    font-size: 50px;
+    font-size: 35px;
   }
 }

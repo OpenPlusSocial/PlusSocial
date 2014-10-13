@@ -10,11 +10,6 @@ video#bgvid {
     background-size: cover;
 }
 
-@media screen and (max-device-width: 600px) {
-    #bgvid {
-        display: none;
-    }
-}
 
 h1 {
     font-family: 'Montserrat', sans-serif;
@@ -26,22 +21,34 @@ h1 {
     color: white;
     font-weight: bold;
     text-align: center;
+
+
+    h1 {
+        font-size: 80px;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        opacity: 0.8;
+        }
+
+    div.row.page-headline{
+        min-height:200px;
+    }
 }
 
-.landing-page h1 {
-    font-size: 80px;
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    opacity: 0.8;
-}
 
-@media screen and (max-device-width: 600px) {
+
+
+@media screen and (max-width: 767px) {
     .landing-page {
         color: black;
+
+        h1 {
+            font-size: 35px;
+        }
     }
 
-    .landing-page h1 {
-        font-size: 50px;
-    }
+ 
+
+
 }
