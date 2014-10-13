@@ -1,6 +1,20 @@
 module.exports = function (grunt) {
     grunt.initConfig({
 
+
+
+        validation: {
+    options: {
+        reset: grunt.option('reset') || false,
+        stoponerror: false, 
+        path:'logs/html/html-status.json',
+        reportpath:'logs/html/html-report.json'
+    },
+    files: {
+        src: ['src/ProjectIntroductionSite/*.html']
+    }
+},
+
         less: {
             ProjectIntroductionSite: {
                 options: {
@@ -12,14 +26,15 @@ module.exports = function (grunt) {
         },
 
 	watch: {
-		files: "src/ProjectIntroductionSite/css/less/*.less",
-		tasks: ["less"]
+		files: ["src/ProjectIntroductionSite/css/less/*.less",'src/ProjectIntroductionSite/*.html'],
+		tasks: ['less','validation']
 	}
     });
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-html-validation');
     
-    grunt.registerTask('default', ['less','watch']);
+    grunt.registerTask('default', ['less','validation',]);
     // Travis CI task.
     grunt.registerTask('travis',  ['less']);
 };
