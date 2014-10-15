@@ -1,3 +1,9 @@
+body {
+    overflow: hidden;
+    background-color: #E0EEEE;
+}
+
+
 video#bgvid {
     position: fixed;
     right: 0;
@@ -10,6 +16,11 @@ video#bgvid {
     background-size: cover;
 }
 
+
+
+.jumbotron {
+    padding-top: 10px;
+}
 
 h1 {
     font-family: 'Montserrat', sans-serif;
@@ -29,26 +40,111 @@ h1 {
         height: 100%;
         vertical-align: middle;
         opacity: 0.8;
-        }
+    }
 
-    div.row.page-headline{
-        min-height:200px;
+
+
+
+
+    .description {
+        background-color: #B31B1B;
+        opacity: 0.7;
+        border-radius: 25px;
+        text-align: left;
+        margin-top: 30px;
     }
 }
 
 
 
+#circle-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 526px;
+    height: 526px;
+    margin: -263px 0 0 -263px;
+    opacity: 0.7;
+    background: #ADD8E6;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+    -webkit-border-radius: 263px;
+    -moz-border-radius: 263px;
+    -o-border-radius: 263px;
+    border-radius: 263px;
+}
+
+.circle-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 20px;
+    color: black;
+    opacity: 1;
+}
+
+
+.circle-inner h1 {
+    width: 320px;
+    height: 135px;
+    margin: 50px auto 20px;
+    text-indent: -9999em;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.sub-text {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.circle-inner p {
+    width: 320px;
+    margin: 0 auto 25px;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: justify;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#slider-wrap {
+    position: relative;
+    width: 145px;
+    height: 41px;
+    margin: 0 auto;
+    padding: 0 21px 0 20px;
+    display: block;
+    opacity: 1;
+}
 
 @media screen and (max-width: 767px) {
     .landing-page {
         color: black;
+        margin-top: 30px;
+
+
 
         h1 {
             font-size: 35px;
         }
+
+        .sub-text {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+        }
+
+
+        .circle-inner p {
+            text-align: left;
+        }
     }
-
- 
-
-
 }
