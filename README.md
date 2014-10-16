@@ -19,12 +19,12 @@ Ideas, Tasks and Bugs
 Basic Setup:
 ============
 
-Install Node.js
-Install Git
-Clone Repo
-Run npm update -g npm
-Run npm install
-Run npm install -g grunt-cli
+Install Node.js,
+Install Git,
+Clone Repo,
+Run npm update -g npm,
+Run npm install,
+Run npm install -g grunt-cli,
 Run grunt
 
 
