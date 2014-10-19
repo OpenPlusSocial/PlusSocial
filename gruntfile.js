@@ -49,23 +49,31 @@ connect: {
 },
 
 watch: {
-  files: ['gruntfile.js','src/**/*.*',,'test/**/*.*'],
-  tasks: ['less','validation','jshint','jasmine']
-}
-});
+ less: {
+        files: ['src/**/*.less'],
+        tasks: ['less']
+    },
 
+    js: {
+        files: ['gruntfile.js','src/**/*.js','test/**/*.js'],
+        tasks: ['jshint','connect', 'jasmine']
+    } 
+}
+}); 
+ 
+ 
 
 grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-less');
-grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-contrib-watch'); 
 grunt.loadNpmTasks('grunt-html-validation');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-jasmine');
 
 
- // Unit Testing Task
-grunt.registerTask('default', ['jshint','connect', 'jasmine','validation','less']);
+// Unit Testing Task
+grunt.registerTask('default', ['jshint','connect', 'jasmine','validation','less']); 
 
-    // Travis CI task.
-grunt.registerTask('travis',  [,'jshint','connect', 'jasmine','validation','less']);
+// Travis CI task.
+grunt.registerTask('travis',  ['jshint','connect', 'jasmine','validation','less']);
 };
