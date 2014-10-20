@@ -14,15 +14,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/site.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="import" href="ui-template-lib.html">
 </head>
 <body>
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> 
 
-    <video autoplay loop id="bgvid" class="hidden-xs"> 
-        <source src="media/video/Daisy_flowers_2.mp4" type="video/mp4">
-    </video>
+    <div id="fullVideo"></div>   
+
+    <script>
+      // Add the template to the Shadow DOM
+      var link = document.querySelector('link[rel=import]');
+      var heart = link.import;
+      / Access DOM of the document in ui-template-lib.html /
+      var tmpl = heart.querySelector('.ops-video');
+      var host = document.querySelector('#fullVideo');
+      var root = host.createShadowRoot();
+      root.appendChild(document.importNode(tmpl.content, true));
+    </script>
+
 
     <div class="container-fluid">
         <a href="https://github.com/OpenPlusSocial/PlusSocial">
