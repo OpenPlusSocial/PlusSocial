@@ -16,23 +16,24 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="import" href="ui-template-lib.html">
 </head>
+
 <body>
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> 
+    <![endif]-->
 
-    <ops-video></ops-video>   
+    <ops-video></ops-video>
 
     <script>
-      // Add the template to the Shadow DOM
-      var link = document.querySelector('link[rel=import]');
-      var heart = link.import;
-      / Access DOM of the document in ui-template-lib.html /
-      var tmpl = heart.querySelector('.ops-video');
-      / This should be automated /
-      var host = document.querySelector('ops-video');
-      var root = host.createShadowRoot();
-      root.appendChild(document.importNode(tmpl.content, true));
+    // Add the template to the Shadow DOM
+    var link = document.querySelector('link[rel=import]');
+    var heart = link.import;
+    / Access DOM of the document in ui-template-lib.html /
+    var tmpl = heart.querySelector('.ops-video');
+    / This should be automated /
+    var host = document.querySelector('ops-video');
+    var root = host.createShadowRoot();
+    root.appendChild(document.importNode(tmpl.content, true));
     </script>
 
 
@@ -41,23 +42,28 @@
             <div class="jumbotron landing-page hidden-xs">
 
                 <div class="row page-headline">
-                    <div class="col-xs-5 text-right"><h1>Open</h1></div>
+                    <div class="col-xs-5 text-right">
+                        <h1>Open</h1>
+                    </div>
                     <div class="col-xs-2 ">
                         <h1>
                             <img alt="github" src="Media/Images/Icons/plus128x87.png" width="100">
                         </h1>
                     </div>
 
-                    <div class="col-xs-5 text-left"><h1>Social</h1></div>
+                    <div class="col-xs-5 text-left">
+                        <h1>Social</h1>
+                    </div>
                 </div>
- 
+
 
 
                 <div id="circle-wrap" style="display: block;">
                     <div class="circle-inner">
                         <div class="row">
                             <img alt="github" src="Media/Images/GitHub/GitHub-Mark-120px-plus.png" width="140">
-                        </div><div class="sub-title">
+                        </div>
+                        <div class="sub-title">
                             <div class="sub-text">Open, Distributed and Ad Free</div>
                         </div>
 
@@ -80,10 +86,12 @@
                 <p>Control your own data, exposed in open formats for use in other social feed applications.</p>
             </div>
         </a>
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
