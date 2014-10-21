@@ -21,7 +21,7 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> 
 
-    <div id="fullVideo"></div>   
+    <ops-video></ops-video>   
 
     <script>
       // Add the template to the Shadow DOM
@@ -29,7 +29,8 @@
       var heart = link.import;
       / Access DOM of the document in ui-template-lib.html /
       var tmpl = heart.querySelector('.ops-video');
-      var host = document.querySelector('#fullVideo');
+      / This should be automated /
+      var host = document.querySelector('ops-video');
       var root = host.createShadowRoot();
       root.appendChild(document.importNode(tmpl.content, true));
     </script>

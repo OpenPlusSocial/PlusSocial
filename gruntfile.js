@@ -5,12 +5,13 @@ module.exports = function (grunt) {
         all: [
         "Gruntfile.js",
         "src/**/*.js",
-        "test/**/*.js"
+        "test/**/*.js",
+        "!test/helpers/*.js"
         ],
         options: {
           jshintrc: '.jshintrc'
-      },
-  },
+        },
+    },
 
   validation: {
     options: {
@@ -34,20 +35,28 @@ less: {
 },
 
 jasmine: {
-    src: ['src/**/*.js'],
-    options: {
-        outfile: 'logs/javascript/jasmine.html',
-        host: 'http://127.0.0.1:8001/',
-        specs: 'test/**/*spec.js'
-    } 
+
+        test:{
+            src: ['src/**/*.js'],
+            options: {
+                outfile: 'logs/javascript/jasmine.html',               
+                vendor: ['test/helpers/jquery-2.1.1.js','test/helpers/jasmine-jquery.js'],
+                specs: 'test/**/*spec.js'
+               
+            }
+        } 
 },  
 
 connect: {
   
-    test: {
+
+    FeedTestSite: {
       options: {
-        port: 8001,
-        base: ''
+        port: 9001,
+        livereload: true,
+        hostname:'localhost',
+        base: 'src/FeedTestSite',
+        open: true     
       }
     },
 
@@ -69,7 +78,7 @@ watch: {
     },
     html: {
         files: ['src/**/*.html'],
-        tasks: ['validation']
+        tasks: ['jshint', 'jasmine','validation',]
     },
     less: {
         files: ['src/**/*.less'],
@@ -78,11 +87,11 @@ watch: {
 
     js: {
         files: ['src/**/*.js','test/**/*.js'],
-        tasks: ['jshint','connect:test', 'jasmine'] 
+        tasks: ['jshint', 'jasmine'] 
     } ,
     grunt: {
         files: ['gruntfile.js'],
-        tasks: ['jshint','connect:test', 'jasmine','validation','less'] 
+        tasks: ['jshint', 'jasmine','validation','less'] 
     } 
 }
 
@@ -94,10 +103,10 @@ watch: {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     // Unit Testing Task
-    grunt.registerTask('default', ['jshint','connect:test', 'jasmine','validation','less']);  
+    grunt.registerTask('default', ['jshint','jasmine','validation','less']);  
 
     // Unit Testing Task
-    grunt.registerTask('server', ['connect:ProjectIntroductionSite','watch']);  
+    grunt.registerTask('server', ['connect:ProjectIntroductionSite','connect:FeedTestSite','watch']);  
 
     // Travis CI task.
     grunt.registerTask('travis',  ['jshint','connect', 'jasmine','validation','less']);
