@@ -13,14 +13,29 @@ describe('Test Page Layout', function() {
 
   describe('Given the test page', function() {
 
-    it('should has a header', function() {
+    it('should have a feed for id 1', function() {
 
-      var header = $('h1');
+      var feed = $('ops-feed-per[data-feed-id="1"]');
 
-      expect(header).toHaveText('Feed Tests');
+      expect(feed).toBeInDOM(); 
 
     });
 
+  it('should have a feed for id 2', function() {
+
+      var feed = $('ops-feed-per[data-feed-id="2"]');
+
+      expect(feed).toBeInDOM(); 
+
+    });
+
+    it('should have a timeline for id 1 and 2', function() {
+
+      var feed = $('ops-feed-timeline[data-timeline-ids="[1,2]"]');
+
+      expect(feed).toBeInDOM(); 
+
+    });
 
   });
 

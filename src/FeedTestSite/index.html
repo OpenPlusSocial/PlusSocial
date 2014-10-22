@@ -1,1 +1,49 @@
-<h1>Feed Tests</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge'><![endif]-->
+    <title>OpenPlusSocial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <link rel="import" href="ops-feed-lib.html">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <h1>Feed Tests</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="row text-center">
+                    <h2>Feed 1</h2>
+                    <ops-feed-per data-feed-id="1"></ops-feed-per>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row text-center">
+                    <h2>Timeline</h2>
+                     <ops-feed-timeline data-timeline-ids="[1,2]"></ops-feed-timeline>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row text-center">
+                    <h2>Feed 2</h2>
+                     <ops-feed-per data-feed-id="2"></ops-feed-per>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="ops-feed-setup.js"></script>
+
+
+</body>
+
+</html>
