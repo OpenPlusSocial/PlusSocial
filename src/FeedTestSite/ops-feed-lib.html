@@ -4,15 +4,24 @@
     <meta charset="utf-8">
 </head>
 <body>
+
+	<div class="stubHost" data-feed-id="1">
     <template class="ops-feed-per">
         <style>
         </style>
 		<h3>Feed Entry Header</h3>
+		<content class="*"></content>
+		<script type="text/javascript">
+		var feedid = document.currentScript.parentNode.host.getAttribute("data-feed-id");
+		console.log(feedid);
+		</script>
     </template>
+    </div>
     <template class="ops-feed-timeline">
         <style>
         </style>
 		<h3>Tiemline Header</h3>
+		<content class="*"></content>
     </template>
 </body>
 </html>
