@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 </head>
+
 <body>
 
-	<div class="stubHost" data-feed-id="1">
+
     <template class="ops-feed-per">
         <style>
         </style>
-		<h3>Feed Entry Header</h3>
-		<content class="*"></content>
-		<script type="text/javascript">
-		var feedid = document.currentScript.parentNode.host.getAttribute("data-feed-id");
-		console.log(feedid);
-		</script>
+
+        <h3>Feed Entry Header</h3>
+
+        <content class="*"></content>
+        <h4 class="subHeading"></h4>
+
+
+        <script type="text/javascript">
+		    if (typeof document.currentScript !== 'undefined') {
+		        var feedid = document.currentScript.parentNode.host.getAttribute("data-feed-id");
+		        var subHeading = document.currentScript.parentNode.getElementsByClassName('subHeading');
+
+				for (var i = 0; i < subHeading.length; i++) {
+				      subHeading[i].innerHTML = "Feed ID:" + feedid;
+				          
+				}
+
+
+		    } else {
+		        console.log(feedid);
+		    }
+        </script>
+
+
     </template>
-    </div>
+
     <template class="ops-feed-timeline">
         <style>
         </style>
-		<h3>Tiemline Header</h3>
-		<content class="*"></content>
+        <h3>Tiemline Header</h3>
+        <content class="*"></content>
     </template>
 </body>
+
 </html>
