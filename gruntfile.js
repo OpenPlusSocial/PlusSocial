@@ -40,7 +40,7 @@ jasmine: {
             src: ['src/**/*.js'],
             options: {
                 outfile: 'logs/javascript/jasmine.html',               
-                vendor: ['test/helpers/jquery-2.1.1.js','test/helpers/jasmine-jquery.js'],
+                vendor: ['test/helpers/jquery-2.1.1.js','test/helpers/jasmine-jquery.js','https://www.google.com/jsapi'],
                 specs: 'test/**/*spec.js'
                
             }
