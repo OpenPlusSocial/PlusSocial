@@ -25,8 +25,8 @@
             <div class="col-xs-4">
                 <div class="row text-center">
                     <h2>Feed 1</h2>
-                    <ops-feed-per data-feed-id="1" data-feed-url="https://www.googledrive.com/host/0B7PRjJG6HFAiMTRrbF9XeDVYa3M">
-                           <div id="feed1"></div>
+                    <ops-feed-per data-feed-id="1" data-feed-url="http://feeds.bbci.co.uk/sport/0/football/rss.xml">
+                        <div id="feed1"></div>
                     </ops-feed-per>
                 </div>
             </div>
@@ -39,8 +39,8 @@
             <div class="col-xs-4">
                 <div class="row text-center">
                     <h2>Feed 2</h2>
-                    <ops-feed-per data-feed-id="2" data-feed-url="https://www.googledrive.com/host/0B7PRjJG6HFAiMTRrbF9XeDVYa3M">
-                         <div id="feed2"></div>
+                    <ops-feed-per data-feed-id="2" data-feed-url="http://newsrss.bbc.co.uk/rss/sportonline_uk_edition/other_sports/cycling/rss.xml">
+                        <div id="feed2"></div>
                     </ops-feed-per>
                 </div>
             </div>
@@ -49,29 +49,48 @@
 
     <script src="ops-feed-setup.js"></script>
 
-   
+
     <script type="text/javascript">
+    google.load("feeds", "1");
 
 
-        google.load("feeds", "1");
+    function initialize() {
 
-        function initialize() {
-          var feed = new google.feeds.Feed("http://fastpshb.appspot.com/feed/1/fastpshb");
-          feed.load(function(result) {
+
+
+
+        var callbackProxy1 = function(result) {
+            var container1 = document.getElementById("feed1");
+            displayfeed(result, container1);
+        };
+
+        var callbackProxy2 = function(result) {
+            var container2 = document.getElementById("feed2");
+            displayfeed(result, container2);
+        };
+
+        var feed1 = new google.feeds.Feed("http://feeds.bbci.co.uk/sport/0/football/rss.xml");
+        feed1.load(callbackProxy1);
+
+        var feed2 = new google.feeds.Feed("http://feeds.bbci.co.uk/sport/0/rss.xml?edition=uk");
+        feed2.load(callbackProxy2);
+
+
+
+        function displayfeed(result, container) {
             if (!result.error) {
-              var container1 = document.getElementById("feed1");
-              var container2 = document.getElementById("feed2");
-              for (var i = 0; i < result.feed.entries.length; i++) {
-                var entry = result.feed.entries[i];
-                var div = document.createElement("div");
-                div.appendChild(document.createTextNode(entry.title));
-                container1.appendChild(div);
-                container2.appendChild(div);
-              }
-            }
-          });
+                var thefeeds = result.feed.entries
+                for (var i = 0; i < thefeeds.length; i++)
+                    container.innerHTML += "<li><a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a></li>"
+                container.innerHTML += "</ul>"
+
+
+            } else
+                alert("Error fetching feeds!")
         }
-        google.setOnLoadCallback(initialize);
+    }
+
+    google.setOnLoadCallback(initialize);
     </script>
 
 </body>
